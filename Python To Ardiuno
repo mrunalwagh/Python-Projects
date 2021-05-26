@@ -1,0 +1,39 @@
+import serial
+import time
+
+ser = serial.Serial('COM8', 9600)
+
+if result == True:
+    print(" Authorized Car")
+    True ==11
+    num=11
+    if num > 10:
+        print(" Authorized Car")
+        n = 1
+        s = str(n)
+        print(s)
+        time.sleep(1)
+        print(s)
+        print(s)
+        time.sleep(1)
+        print(s)
+        ser.write(str.encode(s))
+        time.sleep(1)
+        print(s)
+
+elif result == False:
+    print(" Authorized Car")
+    False ==9
+    num=9
+    if num > 8:
+        n = 0
+        s = str(n)
+        print(s)
+        time.sleep(1)
+        print(s)
+        print(s)
+        time.sleep(1)
+        print(s)
+        ser.write(str.encode(s))
+        time.sleep(1)
+        print(s)
