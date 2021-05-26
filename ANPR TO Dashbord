@@ -1,0 +1,14 @@
+import requests
+from pprint import pprint
+from time import sleep
+
+regions = ['in']
+with open('car1.jpg', 'rb') as fp:
+    response = requests.post(
+        'https://api.platerecognizer.com/v1/plate-reader/',
+        data=dict(regions=regions),                              # Optional
+        files=dict(upload=fp),
+        headers={'Authorization': 'Token 4c1ce4c43bfb9f96b35cc3b929a2b2bbb112303e'})
+jsonRes = response.json()
+plate = jsonRes["results"][0]["plate"]
+print(plate.upper())
